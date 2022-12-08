@@ -1,8 +1,10 @@
 package com.qfedu.fmmal;
 
 import com.qfedu.fmmal.dao.CategoryMapper;
+import com.qfedu.fmmal.dao.ProductCommentsMapper;
 import com.qfedu.fmmal.dao.ProductMapper;
 import com.qfedu.fmmal.entity.CategoryVO;
+import com.qfedu.fmmal.entity.ProductCommentsVO;
 import com.qfedu.fmmal.entity.ProductVO;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -21,6 +23,9 @@ class ApiApplicationTests {
 
     @Autowired
     private ProductMapper productMapper;
+
+    @Autowired
+    private ProductCommentsMapper productCommentsMapper;
 
     @Test
     void contextLoads() {
@@ -53,5 +58,13 @@ class ApiApplicationTests {
             System.out.println(c);
         }
     }
+
+//    @Test
+//    public void testSelecetCommentsByProductId() {
+//        List<ProductCommentsVO> productCommentsVOS = productCommentsMapper.selecetCommentsByProductId("3");
+//        for (ProductCommentsVO pcvo: productCommentsVOS) {
+//            System.out.println(pcvo);
+//        }
+//    }
 
 }
